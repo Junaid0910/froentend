@@ -1,0 +1,195 @@
+/* General Styles */
+.main-app-container {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .app-content {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 87%;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+    /* color: #4a90e2; */
+    margin-bottom: 10px;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    color: #cccccc;
+  }
+  
+  /* Button Group */
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #357abd;
+  }
+  
+  button:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+  }
+  
+  .start-button {
+    background-color: #34c759;
+  }
+  
+  .stop-button {
+    background-color: #ff3b30;
+  }
+  
+  /* Transcript Container */
+  .transcript-container {
+    margin-top: 20px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .transcript-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .transcript-header h3 {
+    color: #4a90e2;
+    margin: 0;
+  }
+  
+  .transcript-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .transcript-box {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 150px;
+    white-space: pre-wrap;
+    font-family: "Courier New", monospace;
+  }
+  
+  /* PDF Section */
+  .pdf-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .pdf-button {
+    background-color: #4a90e2;
+  }
+  
+  .download-link {
+    display: block;
+    margin-top: 15px;
+    color: #4a90e2;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .download-link:hover {
+    color: #357abd;
+  }
+  
+  /* Description Section */
+  .description-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+  }
+  
+  .description-section h2 {
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-bottom: 20px;
+  }
+  
+  .description-section h3 {
+    font-size: 1.5rem;
+    color: #4a90e2;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .description-section p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    line-height: 1.6;
+  }
+  
+  .description-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .description-section ul li {
+    margin-bottom: 10px;
+    color: #cccccc;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-section p {
+      font-size: 1rem;
+    }
+  
+    .button-group {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .transcript-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .transcript-actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
