@@ -495,13 +495,31 @@ const MainApp = () => {
               execFormat("bold");
               triggerCommandFeedback("Bold Toggle B");
               continue;
+            } else if (cmd === "stop bold") {
+              if (document.queryCommandState("bold")) {
+                execFormat("bold");
+              }
+              triggerCommandFeedback("Bold Off");
+              continue;
             } else if (cmd === "italic" || cmd === "toggle italic") {
               execFormat("italic");
               triggerCommandFeedback("Italic Toggle I");
               continue;
+            } else if (cmd === "stop italic") {
+              if (document.queryCommandState("italic")) {
+                execFormat("italic");
+              }
+              triggerCommandFeedback("Italic Off");
+              continue;
             } else if (cmd === "underline" || cmd === "toggle underline") {
               execFormat("underline");
               triggerCommandFeedback("Underline Toggle U");
+              continue;
+            } else if (cmd === "stop underline") {
+              if (document.queryCommandState("underline")) {
+                execFormat("underline");
+              }
+              triggerCommandFeedback("Underline Off");
               continue;
             } else if (cmd === "heading one" || cmd === "heading 1") {
               execFormat("formatBlock", "H1");
