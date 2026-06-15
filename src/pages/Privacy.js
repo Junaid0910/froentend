@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+
 import "./Privacy.css"; // Import the Privacy.css file
 
 const Privacy = () => {
@@ -132,7 +132,7 @@ const Privacy = () => {
             </li>
           </ul>
           <p>
-            To exercise these rights, please contact us at <Link to="/contact">support@voicetype.com</Link>.
+            To exercise these rights, please contact us at postora18@gmail.com.
           </p>
         </div>
       </div>
@@ -175,8 +175,7 @@ const Privacy = () => {
             If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:
           </p>
           <p>
-            <strong>Email:</strong> <Link to="/contact">support@voicetype.com</Link><br />
-            <strong>Address:</strong> 123 Privacy Lane, Data City, DC 12345, USA
+            <strong>Email:</strong> postora18@gmail.com
           </p>
         </div>
       </div>

@@ -315,17 +315,11 @@ const Help = () => {
         <h2>5. Contact Support</h2>
         <div className="content-box">
           <p>
-            If you need further assistance, our support team is here to help. You can reach us via:
+            If you need further assistance, you can reach us via:
           </p>
           <ul>
             <li>
-              <strong>Email:</strong> <Link to="/contact">support@voicetype.com</Link>
-            </li>
-            <li>
-              <strong>Phone:</strong> 
-            </li>
-            <li>
-              <strong>Live Chat:</strong> Available on our website during business hours.
+              <strong>Email:</strong> postora18@gmail.com
             </li>
           </ul>
         </div>
@@ -340,10 +334,7 @@ const Help = () => {
           </p>
           <ul>
             <li>
-              <strong>Feedback Form:</strong> <Link to="/feedback">Submit Feedback</Link>
-            </li>
-            <li>
-              <strong>Community Forum:</strong> Join our community to share ideas and connect with other users.
+              <strong>Email:</strong> postora18@gmail.com
             </li>
           </ul>
         </div>
@@ -358,13 +349,13 @@ const Help = () => {
           </p>
           <ul>
             <li>
-              <strong>Operating System:</strong> Windows 10, macOS 10.14+, iOS 12+, Android 8.0+
+              <strong>Operating System:</strong> Windows, macOS, Linux, iOS, Android
             </li>
             <li>
-              <strong>Browser:</strong> Chrome, Edge (latest versions)
+              <strong>Browser:</strong> Google Chrome, Microsoft Edge, Safari, Opera (browsers supporting Web Speech API)
             </li>
             <li>
-              <strong>Internet Connection:</strong> Minimum 5 Mbps for optimal performance
+              <strong>Internet Connection:</strong> Standard internet connection required for voice recognition
             </li>
           </ul>
         </div>
@@ -378,8 +369,7 @@ const Help = () => {
             For legal inquiries, please contact us at:
           </p>
           <p>
-            <strong>Email:</strong> legal@voicetype.com<br />
-            <strong>Address:</strong> 123 Legal Lane, Compliance City, CC 12345, USA
+            <strong>Email:</strong> postora18@gmail.com
           </p>
         </div>
       </div>

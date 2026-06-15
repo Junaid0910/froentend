@@ -6,7 +6,7 @@ import "./Contact.css"; // Import the Contact.css file
 const Contact = () => {
   // Function to open default email client
   const handleSendEmail = () => {
-    const email = "support@voicetype.com";
+    const email = "postora18@gmail.com";
     const subject = "Support Request - VoiceType";
     const body = "Hello VoiceType Team,\n\nI need assistance with the following:\n\n";
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -19,7 +19,7 @@ const Contact = () => {
       <div className="hero-section">
         <h1>Contact Us</h1>
         <p>
-          We're here to help! If you have any questions, feedback, or need assistance, please don't hesitate to reach out to us. Our support team is available to assist you.
+          We're here to help! If you have any questions, feedback, or need assistance, please don't hesitate to reach out. We will get back to you as soon as possible.
         </p>
       </div>
 
@@ -28,13 +28,13 @@ const Contact = () => {
         <h2>1. Support Email</h2>
         <div className="content-box">
           <p>
-            You can contact us directly via email. Click the button below to open your email client and send us a message:
+            You can contact us directly via email. Click the button below to send us a message:
           </p>
           <button className="email-button" onClick={handleSendEmail}>
             📧 Send Email to Support
           </button>
           <p>
-            Alternatively, you can manually send an email to: <strong>support@voicetype.com</strong>.
+            Alternatively, you can manually email us at: <strong>postora18@gmail.com</strong>
           </p>
         </div>
       </div>
@@ -49,42 +49,12 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Business Hours Section */}
-      <div className="section">
-        <h2>3. Business Hours</h2>
-        <div className="content-box">
-          <p>
-            Our support team is available during the following hours:
-          </p>
-          <ul>
-            <li><strong>Monday to Friday:</strong> 9 AM - 5 PM (EST)</li>
-            <li><strong>Saturday & Sunday:</strong> Closed</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Address Section */}
-      <div className="section">
-        <h2>4. Address</h2>
-        <div className="content-box">
-          <p>
-            If you need to reach us by mail, our office address is:
-          </p>
-          <p>
-            <strong>VoiceType Inc.</strong><br />
-            123 Support Lane<br />
-            Help City, HC 12345<br />
-            USA
-          </p>
-        </div>
-      </div>
-
       {/* Feedback & Suggestions Section */}
       <div className="section">
-        <h2>5. Feedback & Suggestions</h2>
+        <h2>3. Feedback & Suggestions</h2>
         <div className="content-box">
           <p>
-            We value your feedback! If you have suggestions for improving VoiceType, please let us know by sending an email to <strong>feedback@voicetype.com</strong>.
+            We value your feedback! If you have suggestions for improving VoiceType, please let us know by sending an email to <strong>postora18@gmail.com</strong>.
           </p>
         </div>
       </div>

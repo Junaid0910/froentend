@@ -62,28 +62,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Team Section */}
-      <div className="section">
-        <h2>Meet the Team</h2>
-        <div className="team-grid">
-          <div className="team-card">
-            <img src="https://via.placeholder.com/150" alt="Team Member" />
-            <h3>John Doe</h3>
-            <p>Founder & CEO</p>
-          </div>
-          <div className="team-card">
-            <img src="https://via.placeholder.com/150" alt="Team Member" />
-            <h3>Jane Smith</h3>
-            <p>Lead Developer</p>
-          </div>
-          <div className="team-card">
-            <img src="https://via.placeholder.com/150" alt="Team Member" />
-            <h3>Emily Johnson</h3>
-            <p>UI/UX Designer</p>
-          </div>
-        </div>
-      </div>
-
       {/* Call-to-Action Section */}
       <div className="cta-section">
         <h2>Ready to Get Started?</h2>
