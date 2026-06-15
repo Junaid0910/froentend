@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://voicetype.com/</loc>
+    <loc>https://voice2textdoc.vercel.app/</loc>
     <lastmod>2026-06-15</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://voicetype.com/app</loc>
+    <loc>https://voice2textdoc.vercel.app/app</loc>
     <lastmod>2026-06-15</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://voicetype.com/about</loc>
+    <loc>https://voice2textdoc.vercel.app/about</loc>
     <lastmod>2026-06-15</lastmod>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://voicetype.com/help</loc>
+    <loc>https://voice2textdoc.vercel.app/help</loc>
     <lastmod>2026-06-15</lastmod>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://voicetype.com/contact</loc>
+    <loc>https://voice2textdoc.vercel.app/contact</loc>
     <lastmod>2026-06-15</lastmod>
     <priority>0.50</priority>
   </url>

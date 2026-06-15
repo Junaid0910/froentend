@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://voicetype.com/sitemap.xml
+Sitemap: https://voice2textdoc.vercel.app/sitemap.xml
