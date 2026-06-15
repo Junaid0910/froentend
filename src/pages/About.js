@@ -88,10 +88,10 @@ const About = () => {
       <div className="cta-section">
         <h2>Ready to Get Started?</h2>
         <p>
-          Join thousands of users who are already boosting their productivity with VoiceType. Sign up today and experience the future of speech-to-text technology.
+          Join thousands of users who are already boosting their productivity with VoiceType. Start using VoiceType today and experience the future of speech-to-text technology.
         </p>
         <div className="cta-buttons">
-          <Link to="/app" className="cta-button">GET Stated for FREE</Link>
+          <Link to="/app" className="cta-button">Get Started for Free</Link>
         </div>
       </div>
     </div>

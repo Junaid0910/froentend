@@ -207,16 +207,13 @@ const Help = () => {
           </p>
           <ul>
             <li>
-              <strong>Create an Account:</strong> Sign up for a free account to access all features of VoiceType.
+              <strong>Open the App:</strong> Navigate to the <Link to="/app">Editor App</Link> in your web browser. No registration or installation is required.
             </li>
             <li>
-              <strong>Install the App:</strong> Download and install the VoiceType application on your device.
+              <strong>Grant Permissions:</strong> Allow microphone access when prompted to enable real-time speech-to-text.
             </li>
             <li>
-              <strong>Grant Permissions:</strong> Allow microphone access to enable speech-to-text functionality.
-            </li>
-            <li>
-              <strong>Start Recording:</strong> Click the "Start Recording" button and begin speaking. Your speech will be converted to text in real-time.
+              <strong>Start Dictating:</strong> Click the microphone "Voice" button in the toolbar and begin speaking. Your words will be inserted directly at the text cursor.
             </li>
           </ul>
         </div>
@@ -231,7 +228,7 @@ const Help = () => {
           </p>
           <h3>Q: Is VoiceType free to use?</h3>
           <p>
-            <strong>A:</strong> Yes, VoiceType offers a free tier with basic features. For advanced features, you can upgrade to a premium plan.
+            <strong>A:</strong> Yes! VoiceType is 100% free. All features, including voice dictation, formatting tools, shapes, images, table insertion, and PDF/DOCX exports, are completely unlocked with no registration required.
           </p>
           <h3>Q: How accurate is the speech-to-text conversion?</h3>
           <p>
@@ -243,7 +240,7 @@ const Help = () => {
           </p>
           <h3>Q: How do I export my transcriptions?</h3>
           <p>
-            <strong>A:</strong> You can export your transcriptions as PDF or text files by clicking the "Generate PDF" button.
+            <strong>A:</strong> You can export your documents as PDF, Word (.doc), or plain text (.txt), or print them directly using the "Export" button in the editor's toolbar ribbon.
           </p>
           <h3>Q: Is my data secure?</h3>
           <p>

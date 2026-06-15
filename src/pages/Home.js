@@ -204,7 +204,7 @@ const Home = () => {
         <div className="cta-glow"></div>
         <h2>Ready to Experience the Future?</h2>
         <p>
-          Join thousands of productive individuals who are already redefining their note-taking workflows with VoiceType. Sign up today and experience the speed.
+          Join thousands of productive individuals who are already redefining their note-taking workflows with VoiceType. Start dictating today and experience the speed.
         </p>
         <div className="cta-buttons center">
           <Link to="/app" className="cta-button primary big-btn">
