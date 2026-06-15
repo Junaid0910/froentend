@@ -52,7 +52,7 @@ const Navbar = () => {
     <nav className="navbar">
       <Link to="/" className="logo">
         <FaWaveSquare className="logo-icon" />
-        <span>Voice2Text</span>
+        <span>VoiceType</span>
       </Link>
 
       {/* Desktop Nav Links */}

@@ -44,7 +44,7 @@ const Login = () => {
       const isDefaultMock = username.toLowerCase() === "admin" && password === "admin123";
 
       if (matchedUser || isDefaultMock) {
-        const activeUser = matchedUser ? { name: matchedUser.name, email: matchedUser.email, username: matchedUser.username } : { name: "Administrator", email: "admin@voice2text.com", username: "admin" };
+        const activeUser = matchedUser ? { name: matchedUser.name, email: matchedUser.email, username: matchedUser.username } : { name: "Administrator", email: "admin@voicetype.com", username: "admin" };
         
         localStorage.setItem("loggedInUser", JSON.stringify(activeUser));
 
@@ -71,7 +71,7 @@ const Login = () => {
         <div className="auth-card-header">
           <Link to="/" className="auth-logo">
             <FaWaveSquare className="auth-logo-icon" />
-            <span>Voice2Text</span>
+            <span>VoiceType</span>
           </Link>
           <h2>Welcome Back</h2>
           <p>Login to access your speech transcription console</p>

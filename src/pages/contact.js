@@ -6,9 +6,9 @@ import "./Contact.css"; // Import the Contact.css file
 const Contact = () => {
   // Function to open default email client
   const handleSendEmail = () => {
-    const email = "support@voice2text.com";
-    const subject = "Support Request - Voice2Text";
-    const body = "Hello Voice2Text Team,\n\nI need assistance with the following:\n\n";
+    const email = "support@voicetype.com";
+    const subject = "Support Request - VoiceType";
+    const body = "Hello VoiceType Team,\n\nI need assistance with the following:\n\n";
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
   };
@@ -34,7 +34,7 @@ const Contact = () => {
             📧 Send Email to Support
           </button>
           <p>
-            Alternatively, you can manually send an email to: <strong>support@voice2text.com</strong>.
+            Alternatively, you can manually send an email to: <strong>support@voicetype.com</strong>.
           </p>
         </div>
       </div>
@@ -71,7 +71,7 @@ const Contact = () => {
             If you need to reach us by mail, our office address is:
           </p>
           <p>
-            <strong>Voice2Text Inc.</strong><br />
+            <strong>VoiceType Inc.</strong><br />
             123 Support Lane<br />
             Help City, HC 12345<br />
             USA
@@ -84,7 +84,7 @@ const Contact = () => {
         <h2>5. Feedback & Suggestions</h2>
         <div className="content-box">
           <p>
-            We value your feedback! If you have suggestions for improving Voice2Text, please let us know by sending an email to <strong>feedback@voice2text.com</strong>.
+            We value your feedback! If you have suggestions for improving VoiceType, please let us know by sending an email to <strong>feedback@voicetype.com</strong>.
           </p>
         </div>
       </div>

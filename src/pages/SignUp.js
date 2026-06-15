@@ -79,7 +79,7 @@ const SignUp = () => {
         <div className="auth-card-header">
           <Link to="/" className="auth-logo">
             <FaWaveSquare className="auth-logo-icon" />
-            <span>Voice2Text</span>
+            <span>VoiceType</span>
           </Link>
           <h2>Create Account</h2>
           <p>Sign up to start converting speech to documents</p>
