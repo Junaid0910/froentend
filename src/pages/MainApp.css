@@ -635,6 +635,7 @@
 .doc-canvas-wrapper::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.15); }
 
 .doc-page {
+  position: relative;
   width: 210mm;
   min-height: 297mm;
   max-width: 100%;
@@ -654,6 +655,45 @@
 
 .doc-page:focus {
   box-shadow: 0 4px 30px rgba(0,0,0,0.4), 0 0 0 2px rgba(109,40,217,0.3);
+}
+
+/* Draggable & Resizable Element Styling */
+.draggable-wrapper {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  border: 1.5px dashed transparent;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.draggable-wrapper:hover {
+  border-color: #6d28d9;
+  box-shadow: 0 0 8px rgba(109, 40, 217, 0.2);
+}
+
+.draggable-wrapper:focus-within {
+  border-color: #6d28d9;
+  box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.3);
+  outline: none;
+}
+
+.draggable-wrapper .delete-btn,
+.draggable-wrapper .resize-handle {
+  opacity: 0;
+  pointer-events: auto;
+}
+
+.draggable-wrapper:hover .delete-btn,
+.draggable-wrapper:hover .resize-handle,
+.draggable-wrapper:focus-within .delete-btn,
+.draggable-wrapper:focus-within .resize-handle {
+  opacity: 1;
+}
+
+@media print {
+  .delete-btn,
+  .resize-handle {
+    display: none !important;
+  }
 }
 
 /* Placeholder for empty editor */

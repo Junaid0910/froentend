@@ -161,6 +161,97 @@ const MainApp = () => {
     setLineCount(text.split("\n").length);
   }, []);
 
+  /* ─────── Drag and Resize Handler ─────── */
+  const handleMouseDown = useCallback((e) => {
+    const resizeHandle = e.target.closest(".resize-handle");
+    const deleteBtn = e.target.closest(".delete-btn");
+    const draggableEl = e.target.closest(".draggable-wrapper");
+    if (!draggableEl) return;
+
+    e.preventDefault();
+    editorRef.current?.focus();
+
+    if (deleteBtn) {
+      draggableEl.remove();
+      updateCounts();
+      return;
+    }
+
+    if (resizeHandle) {
+      const startX = e.clientX;
+      const startY = e.clientY;
+      const startWidth = draggableEl.offsetWidth;
+      const startHeight = draggableEl.offsetHeight;
+
+      const handleMouseMove = (moveEvent) => {
+        const deltaX = moveEvent.clientX - startX;
+        const deltaY = moveEvent.clientY - startY;
+
+        const newWidth = Math.max(40, startWidth + deltaX);
+        const newHeight = Math.max(40, startHeight + deltaY);
+
+        draggableEl.style.width = `${newWidth}px`;
+        draggableEl.style.height = `${newHeight}px`;
+
+        const img = draggableEl.querySelector("img");
+        if (img) {
+          img.style.width = "100%";
+          img.style.height = "100%";
+        }
+        const svg = draggableEl.querySelector("svg");
+        if (svg) {
+          svg.setAttribute("width", "100%");
+          svg.setAttribute("height", "100%");
+        }
+      };
+
+      const handleMouseUp = () => {
+        document.removeEventListener("mousemove", handleMouseMove);
+        document.removeEventListener("mouseup", handleMouseUp);
+        updateCounts();
+      };
+
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleMouseUp);
+      return;
+    }
+
+    const rect = draggableEl.getBoundingClientRect();
+    const parentRect = editorRef.current?.getBoundingClientRect();
+    if (!parentRect) return;
+
+    const startX = e.clientX;
+    const startY = e.clientY;
+    const startLeft = draggableEl.offsetLeft;
+    const startTop = draggableEl.offsetTop;
+
+    const handleMouseMove = (moveEvent) => {
+      const deltaX = moveEvent.clientX - startX;
+      const deltaY = moveEvent.clientY - startY;
+
+      let newLeft = startLeft + deltaX;
+      let newTop = startTop + deltaY;
+
+      const maxLeft = parentRect.width - rect.width;
+      const maxTop = parentRect.height - rect.height;
+
+      newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+      newTop = Math.max(0, Math.min(newTop, maxTop));
+
+      draggableEl.style.left = `${newLeft}px`;
+      draggableEl.style.top = `${newTop}px`;
+    };
+
+    const handleMouseUp = () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+      updateCounts();
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+  }, [updateCounts]);
+
   /* ─────── Editor Event Handlers ─────── */
   const handleEditorInput = useCallback(() => {
     updateCounts();
@@ -256,6 +347,23 @@ const MainApp = () => {
     saveSelection();
   };
 
+  /* ─────── Cursor Position Finder ─────── */
+  const getCursorPageCoords = () => {
+    const sel = window.getSelection();
+    if (sel.rangeCount > 0) {
+      const range = sel.getRangeAt(0);
+      const rect = range.getBoundingClientRect();
+      const parentRect = editorRef.current?.getBoundingClientRect();
+      if (parentRect && (rect.top !== 0 || rect.left !== 0)) {
+        return {
+          left: Math.max(20, rect.left - parentRect.left),
+          top: Math.max(20, rect.top - parentRect.top)
+        };
+      }
+    }
+    return { left: 100, top: 100 };
+  };
+
   /* ─────── Insert Image ─────── */
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
@@ -264,7 +372,13 @@ const MainApp = () => {
     reader.onload = (ev) => {
       editorRef.current?.focus();
       restoreSelection();
-      const html = `<div class="inserted-image-wrapper" contenteditable="false" style="text-align:center;margin:16px 0;"><img src="${ev.target.result}" style="max-width:100%;height:auto;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.15);" alt="Inserted image" /></div>`;
+      const coords = getCursorPageCoords();
+      const html = `
+        <div class="draggable-wrapper" style="position: absolute; left: ${coords.left}px; top: ${coords.top}px; width: 220px; height: 160px; z-index: 10; cursor: move; display: inline-block;" contenteditable="false">
+          <button class="delete-btn" data-html2canvas-ignore="true" style="position: absolute; right: -8px; top: -8px; width: 18px; height: 18px; border-radius: 50%; background: #ef4444; color: #fff; border: none; font-size: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 20; line-height: 1;">×</button>
+          <img src="${ev.target.result}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" alt="Inserted image" />
+          <div class="resize-handle" data-html2canvas-ignore="true" style="position: absolute; right: -4px; bottom: -4px; width: 10px; height: 10px; cursor: se-resize; background: #6d28d9; border-radius: 50%; border: 1px solid #fff; z-index: 20;"></div>
+        </div>&nbsp;`;
       document.execCommand("insertHTML", false, html);
       updateCounts();
     };
@@ -276,7 +390,15 @@ const MainApp = () => {
   const insertShape = (shape) => {
     editorRef.current?.focus();
     restoreSelection();
-    const html = `<div class="inserted-shape-wrapper" contenteditable="false" style="text-align:center;margin:16px 0;display:inline-block;">${shape.svg}</div>&nbsp;`;
+    const coords = getCursorPageCoords();
+    const html = `
+      <div class="draggable-wrapper" style="position: absolute; left: ${coords.left}px; top: ${coords.top}px; width: 120px; height: 90px; z-index: 10; cursor: move; display: inline-block;" contenteditable="false">
+        <button class="delete-btn" data-html2canvas-ignore="true" style="position: absolute; right: -8px; top: -8px; width: 18px; height: 18px; border-radius: 50%; background: #ef4444; color: #fff; border: none; font-size: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 20; line-height: 1;">×</button>
+        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+          ${shape.svg.replace(/width="[^"]*"/, 'width="100%"').replace(/height="[^"]*"/, 'height="100%"')}
+        </div>
+        <div class="resize-handle" data-html2canvas-ignore="true" style="position: absolute; right: -4px; bottom: -4px; width: 10px; height: 10px; cursor: se-resize; background: #6d28d9; border-radius: 50%; border: 1px solid #fff; z-index: 20;"></div>
+      </div>&nbsp;`;
     document.execCommand("insertHTML", false, html);
     setShowShapePicker(false);
     updateCounts();
@@ -954,6 +1076,7 @@ const MainApp = () => {
           onInput={handleEditorInput}
           onSelect={handleEditorSelect}
           onKeyDown={handleEditorKeyDown}
+          onMouseDown={handleMouseDown}
           spellCheck
           data-placeholder="Start typing or use voice to dictate your document..."
         />
