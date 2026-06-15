@@ -161,8 +161,14 @@ const MainApp = () => {
     setLineCount(text.split("\n").length);
   }, []);
 
-  /* ─────── Drag and Resize Handler ─────── */
-  const handleMouseDown = useCallback((e) => {
+  /* ─────── Drag and Resize Handler (Touch & Mouse) ─────── */
+  const handleStart = useCallback((e) => {
+    const isTouch = e.type === "touchstart";
+    if (isTouch && e.touches.length > 1) return;
+
+    const clientX = isTouch ? e.touches[0].clientX : e.clientX;
+    const clientY = isTouch ? e.touches[0].clientY : e.clientY;
+
     const resizeHandle = e.target.closest(".resize-handle");
     const deleteBtn = e.target.closest(".delete-btn");
     const draggableEl = e.target.closest(".draggable-wrapper");
@@ -178,14 +184,18 @@ const MainApp = () => {
     }
 
     if (resizeHandle) {
-      const startX = e.clientX;
-      const startY = e.clientY;
+      const startX = clientX;
+      const startY = clientY;
       const startWidth = draggableEl.offsetWidth;
       const startHeight = draggableEl.offsetHeight;
 
-      const handleMouseMove = (moveEvent) => {
-        const deltaX = moveEvent.clientX - startX;
-        const deltaY = moveEvent.clientY - startY;
+      const handleMove = (moveEvent) => {
+        const moveTouch = moveEvent.type === "touchmove";
+        const currentX = moveTouch ? moveEvent.touches[0].clientX : moveEvent.clientX;
+        const currentY = moveTouch ? moveEvent.touches[0].clientY : moveEvent.clientY;
+
+        const deltaX = currentX - startX;
+        const deltaY = currentY - startY;
 
         const newWidth = Math.max(40, startWidth + deltaX);
         const newHeight = Math.max(40, startHeight + deltaY);
@@ -205,14 +215,24 @@ const MainApp = () => {
         }
       };
 
-      const handleMouseUp = () => {
-        document.removeEventListener("mousemove", handleMouseMove);
-        document.removeEventListener("mouseup", handleMouseUp);
+      const handleEnd = () => {
+        if (isTouch) {
+          document.removeEventListener("touchmove", handleMove);
+          document.removeEventListener("touchend", handleEnd);
+        } else {
+          document.removeEventListener("mousemove", handleMove);
+          document.removeEventListener("mouseup", handleEnd);
+        }
         updateCounts();
       };
 
-      document.addEventListener("mousemove", handleMouseMove);
-      document.addEventListener("mouseup", handleMouseUp);
+      if (isTouch) {
+        document.addEventListener("touchmove", handleMove, { passive: false });
+        document.addEventListener("touchend", handleEnd);
+      } else {
+        document.addEventListener("mousemove", handleMove);
+        document.addEventListener("mouseup", handleEnd);
+      }
       return;
     }
 
@@ -220,14 +240,18 @@ const MainApp = () => {
     const parentRect = editorRef.current?.getBoundingClientRect();
     if (!parentRect) return;
 
-    const startX = e.clientX;
-    const startY = e.clientY;
+    const startX = clientX;
+    const startY = clientY;
     const startLeft = draggableEl.offsetLeft;
     const startTop = draggableEl.offsetTop;
 
-    const handleMouseMove = (moveEvent) => {
-      const deltaX = moveEvent.clientX - startX;
-      const deltaY = moveEvent.clientY - startY;
+    const handleMove = (moveEvent) => {
+      const moveTouch = moveEvent.type === "touchmove";
+      const currentX = moveTouch ? moveEvent.touches[0].clientX : moveEvent.clientX;
+      const currentY = moveTouch ? moveEvent.touches[0].clientY : moveEvent.clientY;
+
+      const deltaX = currentX - startX;
+      const deltaY = currentY - startY;
 
       let newLeft = startLeft + deltaX;
       let newTop = startTop + deltaY;
@@ -242,14 +266,24 @@ const MainApp = () => {
       draggableEl.style.top = `${newTop}px`;
     };
 
-    const handleMouseUp = () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseup", handleMouseUp);
+    const handleEnd = () => {
+      if (isTouch) {
+        document.removeEventListener("touchmove", handleMove);
+        document.removeEventListener("touchend", handleEnd);
+      } else {
+        document.removeEventListener("mousemove", handleMove);
+        document.removeEventListener("mouseup", handleEnd);
+      }
       updateCounts();
     };
 
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseUp);
+    if (isTouch) {
+      document.addEventListener("touchmove", handleMove, { passive: false });
+      document.addEventListener("touchend", handleEnd);
+    } else {
+      document.addEventListener("mousemove", handleMove);
+      document.addEventListener("mouseup", handleEnd);
+    }
   }, [updateCounts]);
 
   /* ─────── Editor Event Handlers ─────── */
@@ -1076,7 +1110,8 @@ const MainApp = () => {
           onInput={handleEditorInput}
           onSelect={handleEditorSelect}
           onKeyDown={handleEditorKeyDown}
-          onMouseDown={handleMouseDown}
+          onMouseDown={handleStart}
+          onTouchStart={handleStart}
           spellCheck
           data-placeholder="Start typing or use voice to dictate your document..."
         />
