@@ -15,7 +15,7 @@ const About = () => {
       <div className="section">
         <h2>Our Mission</h2>
         <p>
-          At AuDoc, our mission is to make speech-to-text conversion simple, accurate, and accessible to everyone. Whether you're a student, professional, or content creator, we aim to provide a tool that enhances your productivity and simplifies your workflow.
+          At AuDoc, our mission is to redefine how you create documents. We combine a professional-grade online word processor with real-time voice typing and a multi-format document converter. Our goal is to provide a comprehensive, secure, and registration-free workspace that streamlines the writing, formatting, and file-conversion process for students, writers, and professionals.
         </p>
       </div>
 
@@ -24,39 +24,39 @@ const About = () => {
         <h2>What We Offer</h2>
         <div className="features-grid">
           <div className="feature-card">
-            <h3>🎤 Real-Time Transcription</h3>
+            <h3>🎤 Voice-to-Text Editor</h3>
             <p>
-              Convert your speech into text instantly with our advanced speech recognition technology. Perfect for capturing ideas, notes, and conversations on the go.
+              Dictate directly into an A4 page-like canvas. Enjoy continuous, high-accuracy speech recognition with offline voice commands to structure your document hands-free.
             </p>
           </div>
           <div className="feature-card">
-            <h3>📄 Export to PDF</h3>
+            <h3>📄 Multi-Format Converter</h3>
             <p>
-              Save your transcriptions as PDF documents with just one click. Easily share or print your notes for offline use.
+              Instantly convert and export your voice dictations or typed text into professional PDF, Microsoft Word (DOCX), or plain text (TXT) files in one click.
             </p>
           </div>
           <div className="feature-card">
-            <h3>🔒 Secure & Private</h3>
+            <h3>🔒 Private & Secure</h3>
             <p>
-              Your data is safe with us. We use industry-standard encryption to ensure your transcriptions are always private and secure.
+              Your data is safe. AuDoc processes all speech recognition, formatting, and document conversion 100% client-side. No databases, no tracking, no server logs.
             </p>
           </div>
           <div className="feature-card">
             <h3>🌐 Multi-Language Support</h3>
             <p>
-              SpeechNotes supports multiple languages, making it a versatile tool for users around the world.
+              AuDoc supports voice typing and punctuation insertion for over 14 global languages and dialects, making it a versatile tool for international users.
             </p>
           </div>
           <div className="feature-card">
-            <h3>📱 Cross-Platform Compatibility</h3>
+            <h3>🎨 Rich Text Formatting Ribbon</h3>
             <p>
-              Access AuDoc from any device—desktop, laptop, or mobile. Your transcriptions are always within reach.
+              Style your documents with fonts, sizes, colors, highlight styling, lists, alignment, and full undo/redo capabilities.
             </p>
           </div>
           <div className="feature-card">
-            <h3>✏️ Edit & Format</h3>
+            <h3>✏️ Tables, Shapes, & Images</h3>
             <p>
-              Easily edit and format your transcriptions with our intuitive tools. Add new lines, remove words, and customize your text to suit your needs.
+              Create structured grids, draw shapes, and upload images. Resize and reposition elements inside the editor to construct perfect layouts.
             </p>
           </div>
         </div>

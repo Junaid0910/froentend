@@ -47,11 +47,11 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero-section" ref={heroRef}>
         <div className="hero-content">
-          <div className="hero-badge">AI-Powered Transcription</div>
+          <div className="hero-badge">Voice Typing Document Editor & Converter</div>
           <h1>Welcome to <span className="highlight">AuDoc</span></h1>
-          <p className="subtitle">Your Ultimate Speech-to-Text Solution</p>
+          <p className="subtitle">Professional Online Word Editor & Converter</p>
           <p className="description">
-            Start converting your speech to text in seconds. It's fast, accurate, and free! Join thousands of students, professionals, and writers who are already boosting their productivity with AuDoc.
+            Create, format, and edit documents with real-time voice typing. Dictate text, insert tables, shapes, & images, and instantly convert your work to clean PDF, Word (DOCX), or plain text. The ultimate free online document editor and voice-to-text converter.
           </p>
           <div className="cta-buttons">
             <Link to="/app" className="cta-button primary">
@@ -112,7 +112,7 @@ const Home = () => {
       {/* Features Section */}
       <section className="features-section" id="features" ref={featuresRef}>
         <h2>Why Choose <span className="highlight">AuDoc</span>?</h2>
-        <p className="section-subtitle">We combine state-of-the-art browser APIs with modern layouts to deliver a frictionless experience.</p>
+        <p className="section-subtitle">We combine state-of-the-art voice typing with a premium web-based document editor and converter.</p>
         
         <div className="features-grid">
           <div className="feature-card">
@@ -123,9 +123,9 @@ const Home = () => {
                 <line x1="12" x2="12" y1="19" y2="22" />
               </svg>
             </div>
-            <h3>Real-Time Transcription</h3>
+            <h3>Voice Typing Word Editor</h3>
             <p>
-              Convert your speech into editable text instantly with advanced browser-native speech recognition. Speak and see the magic unfold.
+              Dictate and edit your text directly in a premium Microsoft Word-style editor. Format paragraphs, insert elements, and control styling as you speak.
             </p>
           </div>
 
@@ -138,9 +138,9 @@ const Home = () => {
                 <path d="m9 15 3 3 3-3" />
               </svg>
             </div>
-            <h3>Export to PDF</h3>
+            <h3>Multi-Format Document Converter</h3>
             <p>
-              Download your parsed audio text as fully page-wrapped, beautifully formatted PDF documents instantly without needing server endpoints.
+              Convert your voice-typed documents into styled PDFs, Microsoft Word (DOCX), or plain text (TXT) files in a single click, completely offline.
             </p>
           </div>
 
@@ -150,9 +150,9 @@ const Home = () => {
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
             </div>
-            <h3>Secure & Private</h3>
+            <h3>100% Private & Client-Side</h3>
             <p>
-              Your security is our absolute priority. Everything runs strictly client-side. Your recordings and voice data are never uploaded to any remote server.
+              Your data never leaves your browser. All speech recognition, document editing, and file conversion are processed locally on your device for absolute privacy.
             </p>
           </div>
         </div>

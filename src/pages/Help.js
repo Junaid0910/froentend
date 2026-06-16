@@ -54,9 +54,9 @@ const Help = () => {
           <p>
             <strong>A:</strong> Currently, AuDoc requires an internet connection for speech recognition. Offline functionality is under development.
           </p>
-          <h3>Q: How do I export my transcriptions?</h3>
+          <h3>Q: How do I convert and export my documents?</h3>
           <p>
-            <strong>A:</strong> You can export your documents as PDF, Word (.doc), or plain text (.txt), or print them directly using the "Export" button in the editor's toolbar ribbon.
+            <strong>A:</strong> AuDoc functions as a built-in document converter. You can instantly convert and export your voice-typed or styled document into formats like PDF, Microsoft Word (.docx), or plain text (.txt), or print it directly using the "Export" button in the editor's toolbar ribbon.
           </p>
           <h3>Q: Is my data secure?</h3>
           <p>
@@ -111,16 +111,16 @@ const Help = () => {
           </p>
           <ul>
             <li>
-              <strong>Multi-Language Support:</strong> Convert speech to text in multiple languages.
+              <strong>Multi-Language Support:</strong> Voice type and edit documents in over 14 languages and dialects.
             </li>
             <li>
-              <strong>Edit & Format:</strong> Easily edit and format your transcriptions with intuitive tools.
+              <strong>Rich Text Formatting:</strong> Style document fonts, sizes, colors, highlights, lists, headings, and alignments.
             </li>
             <li>
-              <strong>Export Options:</strong> Save your transcriptions as PDF files.
+              <strong>Document Converter:</strong> Convert and export your voice-typed or edited work to PDF, Word (DOCX), or plain text (TXT) file formats instantly.
             </li>
             <li>
-              <strong>Cloud Sync:</strong> Sync your transcriptions across devices with a premium account.
+              <strong>Interactive Elements:</strong> Insert, resize, and reposition tables, SVG shapes, and local images directly on the A4 page canvas.
             </li>
           </ul>
         </div>
