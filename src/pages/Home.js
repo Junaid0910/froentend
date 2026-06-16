@@ -48,10 +48,10 @@ const Home = () => {
       <section className="hero-section" ref={heroRef}>
         <div className="hero-content">
           <div className="hero-badge">AI-Powered Transcription</div>
-          <h1>Welcome to <span className="highlight">VoiceType</span></h1>
+          <h1>Welcome to <span className="highlight">AuDoc</span></h1>
           <p className="subtitle">Your Ultimate Speech-to-Text Solution</p>
           <p className="description">
-            Start converting your speech to text in seconds. It's fast, accurate, and free! Join thousands of students, professionals, and writers who are already boosting their productivity with VoiceType.
+            Start converting your speech to text in seconds. It's fast, accurate, and free! Join thousands of students, professionals, and writers who are already boosting their productivity with AuDoc.
           </p>
           <div className="cta-buttons">
             <Link to="/app" className="cta-button primary">
@@ -111,7 +111,7 @@ const Home = () => {
 
       {/* Features Section */}
       <section className="features-section" id="features" ref={featuresRef}>
-        <h2>Why Choose <span className="highlight">VoiceType</span>?</h2>
+        <h2>Why Choose <span className="highlight">AuDoc</span>?</h2>
         <p className="section-subtitle">We combine state-of-the-art browser APIs with modern layouts to deliver a frictionless experience.</p>
         
         <div className="features-grid">
@@ -161,7 +161,7 @@ const Home = () => {
       {/* Testimonials Section */}
       <section className="testimonials-section" ref={testimonialsRef}>
         <h2>What Our <span className="highlight">Users</span> Say</h2>
-        <p className="section-subtitle">Read how VoiceType empowers creators, writers, and executives around the globe.</p>
+        <p className="section-subtitle">Read how AuDoc empowers creators, writers, and executives around the globe.</p>
         
         <div className="testimonials-grid">
           <div className="testimonial-card">
@@ -170,7 +170,7 @@ const Home = () => {
             </div>
             <FaQuoteLeft className="quote-icon" />
             <p className="testimonial-text">
-              "VoiceType has completely changed the way I take lecture notes. It's fast, accurate, and incredibly easy to use. The voice commands make new paragraphs trivial!"
+              "AuDoc has completely changed the way I take lecture notes. It's fast, accurate, and incredibly easy to use. The voice commands make new paragraphs trivial!"
             </p>
             <p className="author">- Sarah T., University Student</p>
           </div>
@@ -181,7 +181,7 @@ const Home = () => {
             </div>
             <FaQuoteLeft className="quote-icon" />
             <p className="testimonial-text">
-              "I use VoiceType for transcribing long executive board meetings, and it saves me hours of transcripts. The offline client-side PDF export is absolutely brilliant!"
+              "I use AuDoc for transcribing long executive board meetings, and it saves me hours of transcripts. The offline client-side PDF export is absolutely brilliant!"
             </p>
             <p className="author">- John D., Business Professional</p>
           </div>
@@ -192,7 +192,7 @@ const Home = () => {
             </div>
             <FaQuoteLeft className="quote-icon" />
             <p className="testimonial-text">
-              "As a creative writer, VoiceType helps me capture wild ideas on the go. It's a frictionless, essential tool in my drafting and editing workflow."
+              "As a creative writer, AuDoc helps me capture wild ideas on the go. It's a frictionless, essential tool in my drafting and editing workflow."
             </p>
             <p className="author">- Emily R., Creative Author</p>
           </div>
@@ -204,7 +204,7 @@ const Home = () => {
         <div className="cta-glow"></div>
         <h2>Ready to Experience the Future?</h2>
         <p>
-          Join thousands of productive individuals who are already redefining their note-taking workflows with VoiceType. Start dictating today and experience the speed.
+          Join thousands of productive individuals who are already redefining their note-taking workflows with AuDoc. Start dictating today and experience the speed.
         </p>
         <div className="cta-buttons center">
           <Link to="/app" className="cta-button primary big-btn">

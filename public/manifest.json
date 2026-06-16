@@ -1,6 +1,6 @@
 {
-  "short_name": "VoiceType",
-  "name": "VoiceType - Professional Voice to Text Document Editor",
+  "short_name": "AuDoc",
+  "name": "AuDoc - Voice Typing Document Editor",
   "icons": [
     {
       "src": "favicon.png",

@@ -10,7 +10,7 @@ const Privacy = () => {
       <div className="hero-section">
         <h1>Privacy Policy</h1>
         <p>
-          At <strong>VoiceType</strong>, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you use our application and services. By using VoiceType, you agree to the terms outlined in this policy.
+          At <strong>AuDoc</strong>, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you use our application and services. By using AuDoc, you agree to the terms outlined in this policy.
         </p>
       </div>
 
@@ -47,7 +47,7 @@ const Privacy = () => {
           </p>
           <ul>
             <li>
-              <strong>Service Provision:</strong> To provide, maintain, and improve the functionality of the VoiceType application.
+              <strong>Service Provision:</strong> To provide, maintain, and improve the functionality of the AuDoc application.
             </li>
             <li>
               <strong>Personalization:</strong> To customize your experience and provide features tailored to your usage patterns.
@@ -152,7 +152,7 @@ const Privacy = () => {
         <h2>7. Children's Privacy</h2>
         <div className="content-box">
           <p>
-            VoiceType is not intended for use by individuals under the age of 13. We do not knowingly collect personal information from children. If we become aware that we have collected information from a child without parental consent, we will take steps to delete such information.
+            AuDoc is not intended for use by individuals under the age of 13. We do not knowingly collect personal information from children. If we become aware that we have collected information from a child without parental consent, we will take steps to delete such information.
           </p>
         </div>
       </div>
@@ -162,7 +162,7 @@ const Privacy = () => {
         <h2>8. Changes to This Policy</h2>
         <div className="content-box">
           <p>
-            We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. Any updates will be posted on this page, and we will notify you of significant changes through the app or via email. Your continued use of VoiceType after any changes constitutes your acceptance of the updated policy.
+            We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. Any updates will be posted on this page, and we will notify you of significant changes through the app or via email. Your continued use of AuDoc after any changes constitutes your acceptance of the updated policy.
           </p>
         </div>
       </div>

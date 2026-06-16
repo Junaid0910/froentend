@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className="navbar">
       <Link to="/" className="logo">
         <FaWaveSquare className="logo-icon" />
-        <span>VoiceType</span>
+        <span>AuDoc</span>
       </Link>
 
       {/* Desktop Nav Links */}

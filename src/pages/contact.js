@@ -7,8 +7,8 @@ const Contact = () => {
   // Function to open default email client
   const handleSendEmail = () => {
     const email = "postora18@gmail.com";
-    const subject = "Support Request - VoiceType";
-    const body = "Hello VoiceType Team,\n\nI need assistance with the following:\n\n";
+    const subject = "Support Request - AuDoc";
+    const body = "Hello AuDoc Team,\n\nI need assistance with the following:\n\n";
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
   };
@@ -54,7 +54,7 @@ const Contact = () => {
         <h2>3. Feedback & Suggestions</h2>
         <div className="content-box">
           <p>
-            We value your feedback! If you have suggestions for improving VoiceType, please let us know by sending an email to <strong>postora18@gmail.com</strong>.
+            We value your feedback! If you have suggestions for improving AuDoc, please let us know by sending an email to <strong>postora18@gmail.com</strong>.
           </p>
         </div>
       </div>

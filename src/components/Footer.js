@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>&copy; {new Date().getFullYear()} VoiceType. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} AuDoc. All rights reserved.</p>
         <div className="footer-links">
           <a href="/about">About</a>
           <a href="/privacy">Privacy</a>

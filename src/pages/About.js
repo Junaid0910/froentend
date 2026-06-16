@@ -7,7 +7,7 @@ const About = () => {
     <div className="about-container">
       {/* Hero Section */}
       <div className="hero-section">
-        <h1>About VoiceType</h1>
+        <h1>About AuDoc</h1>
         <p>Learn more about our mission, features, and how we can help you.</p>
       </div>
 
@@ -15,7 +15,7 @@ const About = () => {
       <div className="section">
         <h2>Our Mission</h2>
         <p>
-          At VoiceType, our mission is to make speech-to-text conversion simple, accurate, and accessible to everyone. Whether you're a student, professional, or content creator, we aim to provide a tool that enhances your productivity and simplifies your workflow.
+          At AuDoc, our mission is to make speech-to-text conversion simple, accurate, and accessible to everyone. Whether you're a student, professional, or content creator, we aim to provide a tool that enhances your productivity and simplifies your workflow.
         </p>
       </div>
 
@@ -50,7 +50,7 @@ const About = () => {
           <div className="feature-card">
             <h3>📱 Cross-Platform Compatibility</h3>
             <p>
-              Access VoiceType from any device—desktop, laptop, or mobile. Your transcriptions are always within reach.
+              Access AuDoc from any device—desktop, laptop, or mobile. Your transcriptions are always within reach.
             </p>
           </div>
           <div className="feature-card">
@@ -66,7 +66,7 @@ const About = () => {
       <div className="cta-section">
         <h2>Ready to Get Started?</h2>
         <p>
-          Join thousands of users who are already boosting their productivity with VoiceType. Start using VoiceType today and experience the future of speech-to-text technology.
+          Join thousands of users who are already boosting their productivity with AuDoc. Start using AuDoc today and experience the future of speech-to-text technology.
         </p>
         <div className="cta-buttons">
           <Link to="/app" className="cta-button">Get Started for Free</Link>
